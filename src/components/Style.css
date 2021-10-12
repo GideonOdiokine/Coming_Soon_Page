@@ -4,29 +4,61 @@
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+a:hover{
+  text-decoration: none;
+  color: #fff;
 }
 .page_wrapper {
-  background-image: url("../images/coming_soon.jpg");
+  background-image: url("../images/showcase_img.png");
 }
 
 .h-100 {
   min-height: 100vh;
+}
+nav ul li {
+  padding:0 16px;
+
+}
+.logo{
+  font-size: 40px;
+  color: #000;
+  font-weight: 600;
 }
 div .bg-img {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
+.showcase-content{
+  text-align: center;
+  padding-left: 20px;
+  justify-content: center;
+}
+.showcase-img{
+  padding-right: 20px;
+}
 
 .space-pb--30 {
   padding-bottom: 30px;
 }
-
+.space-my-10{
+  padding-left: 20px;
+}
 .space-pt--30 {
   padding-top: 30px;
 }
-.space-mb--10 {
+.space-mb--50 {
   margin-bottom: 10px;
 }
 .space-pb--25 {
@@ -38,37 +70,35 @@ div .bg-img {
 }
 .content__subtitle {
   font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  font-size: 55px;
   font-weight: 400;
   color: #fff;
 }
 .content__title {
-  /* font-family: "Poppins", sans-serif; */
-  font-size: 30px;
-  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
   line-height: 1.25;
   color: #fff;
 }
 .countdown {
-  font-family: "Poppins", sans-serif;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
 }
 .single-countdown {
   flex-basis: 100px;
-  margin-right: 30px;
-  /* height: 118px; */
+  margin-right: 8px;
 }
 .countdown .single-countdown__time {
   font-size: 48px;
   font-weight: 500;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding: 15px 0;
-  color: #fff;
+  color: #000;
   border-radius: 10px;
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: #fff;
   height: 100px;
 }
 .countdown .single-countdown__text {
@@ -82,38 +112,58 @@ div .bg-img {
 .newsletter-form input[type="email"] {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  width: 500px;
+  width: 300px;
   max-width: 100%;
   margin-right: 5px;
-  padding: 15px 10px;
-  color: #b2b2b2;
+  padding: 10px 8px;
+  color: #000;
   border: 1px solid #d9e2eb;
-  border-radius: 10px;
-  background-color: transparent;
+  background-color: #fff;
+  text-align: center;
+  outline: none;
 }
 .newsletter-form button {
   display: inline-block;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  padding: 15px 40px;
+  padding: 8px 45px;
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 3px;
   background: none;
-  background-color: #3a96ff;
+  background-color: hsl(22, 100%, 61%);
+  outline: none;
+  cursor: pointer;
 }
 img {
   max-width: 100%;
 }
-.content-section {
-  padding-top: 100px;
+
+@media only screen and (max-width:984px){
+  .countdown{
+    justify-content: center;
+  }
+  
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  .logo-hd{
+    text-align: center;
+  }
+  .justify-content-end{
+    justify-content: center !important;
+  }
+  .showcase-content{
+    padding-left: initial;
+  }
   .countdown {
     margin-bottom: -30px;
-    padding-top: 60px;
+    /* padding-top: 60px; */
     justify-content: center;
+  }
+  .space-sm{
+    padding-bottom:30px ;
+    padding-top: 10px;
   }
   .countdown .single-countdown {
     margin-right: 15px;
@@ -131,11 +181,17 @@ img {
   }
 }
 @media only screen and (max-width: 479px) {
+  a{
+    font-size: 22px;
+  }
+  .showcase-img{
+    padding-right: initial;
+  }
   .content-section {
     padding-top: 40px;
   }
   .content__subtitle {
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
   }
   .countdown .single-countdown__time {
@@ -150,14 +206,16 @@ img {
     flex-basis: 70px;
   }
   .newsletter-form button {
-    width: 100%;
+    max-width: 80%;
+    margin: 10px auto;
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 376px) {
   .countdown {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     padding-top: initial;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
+
 }

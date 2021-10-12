@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import HeroImg from '../images/group.png'
 
 
 const Showcase = () => {
     // eslint-disable-next-line
-    const [deadline] = useState("Dec, 16, 2021")
+    const [deadline] = useState("Dec, 17, 2021")
     const [days, setDays] = useState("0")
     const [hours, setHours] = useState("0")
     const [minutes, setMinutes] = useState("0")
@@ -33,47 +34,53 @@ const Showcase = () => {
     return (
         <div className="content-section">
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-8">
-                        <h3 className="content__subtitle space-mb--10">
-                            Coming Soon
-                        </h3>
-                        <p className="content__title">
-                            We are currently working very hard on getting  you a fantastic product.
-                        </p>
-                        <div className="countdown space-mt--50">
-                            <div className="single-countdown">
-                                <span className="single-countdown__time">{days}</span>
-                                <span className="single-countdown__text">Days</span>
-                            </div>
-                            <div className="single-countdown">
-                                <span className="single-countdown__time">{hours}</span>
-                                <span className="single-countdown__text">Hours</span>
-                            </div>
-                            <div className="single-countdown">
-                                <span className="single-countdown__time">{minutes}</span>
-                                <span className="single-countdown__text">Minutes</span>
-                            </div>
-                            <div className="single-countdown">
-                                <span className="single-countdown__time">{seconds}</span>
-                                <span className="single-countdown__text">Seconds</span>
-                            </div>
+                <div className="row d-flex justify-content-between align-items-center ">
+                    <div className="col-lg-6">
+                        <div className="showcase-img">
+                            <img src={HeroImg} alt="img" />
                         </div>
-                        <div className="cs-14-subscription-wrapper space-mt--50 space-mb--30">
-                            <div>
-                                <div className="newsletter-form space-mb--10">
-                                    <input
-                                        type="email"
-                                        placeholder="Enter email here"
-                                        required=""
-                                    />
-                                    <button>NOTIFY ME</button>
+                    </div>
+                    <div className="col-lg-6 justify-content-end ">
+                        <div className="showcase-content space-mx-10">
+                            <h3 className="content__subtitle text-center py-3">
+                                Coming Soon!
+                            </h3>
+                            <p className="content__title">
+                                We are currently working very hard on getting  you a fantastic product.
+                            </p>
+                            <div className="countdown space-mt--50 space-pb--25">
+                                <div className="single-countdown">
+                                    <span className="single-countdown__time">{days}</span>
+                                    <span className="single-countdown__text">Days</span>
                                 </div>
-                                <div className="mailchimp-alerts"></div>
+                                <div className="single-countdown">
+                                    <span className="single-countdown__time">{hours}</span>
+                                    <span className="single-countdown__text">Hours</span>
+                                </div>
+                                <div className="single-countdown">
+                                    <span className="single-countdown__time">{minutes}</span>
+                                    <span className="single-countdown__text">Minutes</span>
+                                </div>
+                                <div className="single-countdown">
+                                    <span className="single-countdown__time">{seconds}</span>
+                                    <span className="single-countdown__text">Seconds</span>
+                                </div>
+                            </div>
+                            <div className="cs-14-subscription-wrapper space-mb--30 space-sm">
+                                <div>
+                                    <div className="newsletter-form">
+                                        <input
+                                            type="email"
+                                            placeholder="Enter Your Email Address"
+                                            required=""
+                                        />
+                                        <button>Notify Me</button>
+                                    </div>
+                                    <div className="mailchimp-alerts"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
