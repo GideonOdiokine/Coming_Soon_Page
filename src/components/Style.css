@@ -153,3 +153,11 @@ img {
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 360px) {
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: initial;
+  }
+}
