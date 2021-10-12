@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'react-router-dom';
 import Logo from '../images/logo-14.png'
 
 const Header = () => {
@@ -9,9 +8,11 @@ const Header = () => {
                 <div className="row">
                     <div className="col-4">
                         <div>
-                            <a href="#" >
+                            {/* // eslint-disable-next-line */}
+                            <a href="/" >
                                 <img src={Logo} alt="logo" />
                             </a>
+
                         </div>
                     </div>
                 </div>
