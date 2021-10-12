@@ -149,4 +149,7 @@ img {
   .countdown .single-countdown {
     flex-basis: 70px;
   }
+  .newsletter-form button {
+    width: 100%;
+  }
 }
